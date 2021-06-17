@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="body-back-color">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Daniel Boldrin Portifolio</title>
+    <link rel="icon" type="image/png" href="~/Images/avatar.jpg" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+</head>
+<body class="body-back-color">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white" style="padding-bottom: 0px; height: 6vh;">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index" style="margin-right: 60px;">Daniel Boldrin Portifolio</a>
+                <button id="btn1" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="nav1" name="nav1" class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul id="list1" name="list1" class="navbar-nav flex-grow-1" style="justify-content: space-between;">
+                        <li class="nav-item menu-home">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item menu-resume">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Resume">Resume</a>
+                        </li>
+                        <li class="nav-item menu-games">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Games">Games</a>
+                        </li>
+                        <li class="nav-item menu-projects">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Projects">Projects</a>
+                        </li>
+                        <li class="nav-item menu-experience">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Experience">Experience</a>
+                        </li>
+                        <li class="nav-item menu-education">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Education">Education</a>
+                        </li>
+                        <li class="nav-item menu-contact">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Contact">Contact</a>
+                        </li>
+                        <!--<li class="nav-item menu-booklist">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/BookList/Index">Book List</a>
+                        </li>
+                        <li class="nav-item, align-content-end menu-bookcart">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/BookList/Cart">Book Cart</a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="scrollable">
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <footer class="border-top footer text-muted navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="background-color: white; width: 100%; text-align: right !important; height: 6vh;">
+        &copy; 2021 - Daniel Boldrin
+        <button id="dd2" name="dd2" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav2" name="nav2" class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" style="text-align: right !important; float: right;">
+            <ul id="list2" name="list2" class="navbar-nav flex-grow-1" style="text-align: right !important; float: right; display: block; ">
+                <li class="nav-item" style="text-align: right !important; float: right;">
+                    <a class="nav-link text-dark" href="https://www.linkedin.com/in/daniel-boldrin/">
+                        <img class="intro__icon" src="~/Images/BW/linkedin.png" alt="LinkedIn Logo" style="border-radius: 50%; width: 25px; height: 25px;">
+                        LinkedIn
+                    </a>
+                </li>
+                <li class="nav-item" style="text-align: right !important; float: right;">
+                    <a class="nav-link text-dark" href="https://github.com/soueuroya">
+                        <img class="intro__icon" src="~/Images/BW/github.png" alt="Github Logo" style="border-radius: 50%; width: 25px; height: 25px;">
+                        Github
+                    </a>
+                </li>
+                <li class="nav-item, align-content-end" style="text-align: right !important; float: right;">
+                    <a class="nav-link text-dark" href="https://danielboldrin.itch.io/">
+                        <img class="intro__icon" src="~/Images/BW/itchdotio.png" alt="Itch.io Logo" style="border-radius: 50%; width: 25px; height: 25px;">
+                        Itch.io
+                    </a>
+                </li>
+                <li class="nav-item, align-content-end" style="text-align: right !important; float: right;">
+                    <a class="nav-link text-dark" href="mailto:daniel_cboldrin@hotmail.com">
+                        <img class="intro__icon" src="~/Images/BW/email.png" alt="Email Logo" style="border-radius: 50%; width: 25px; height: 25px;">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
+
+<style>
+    .nav-link:hover {
+        box-shadow: inset 0 -3px 0 #000000 !important;
+    }
+
+    .menu-home {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-projects {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-resume {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-games {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-experience {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-education {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-contact {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-booklist {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-bookcart {
+        width: 100%;
+        text-align: center;
+    }
+</style>

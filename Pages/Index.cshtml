@@ -1,0 +1,77 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<head>
+    <meta charset="utf-8">
+    <title>Daniel Corbi Boldrin</title>
+    <meta name="description" content="System Analyst Developer and Game Programmer">
+    <meta name="author" content="Daniel Corbi Boldrin">
+    <link rel="stylesheet" href="~/css/main.css" />
+    <script defer="" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+<header class="intro">
+    <div class="intro__wrap">
+        <br />
+        <br />
+        <h1 class="intro__hello">Hello!</h1>
+        <br />
+        <br />
+        <br />
+        <img class="intro__icon" src="~/Images/avatar.jpg" alt="Daniel Corbi Boldrin Avatar" style="border-radius: 25% 50% 50% 25%;">
+        <h2 class="intro__tagline" style="text-align: center;">
+            I'm <span class="name">Daniel Boldrin</span>, a passionate professional System Analyst and Game Programmer who loves to design and develop games and applications.
+        </h2>
+    </div>
+    <h3 class="intro__contact" style="text-align: center; overflow:hidden;">
+        <p  class="animated">
+            <span>
+                <a href="mailto:daniel_cboldrin@hotmail.com" target="_blank" class="highlight-link">daniel_cboldrin@hotmail.com<img class="intro__icon" src="~/Images/BW/email-t.png" alt="Daniel Corbi Boldrin Avatar" style="border-radius: 50%; width:25px; height:25px; margin-left: 10px;"></a>
+            </span>
+        </p>
+    </h3>
+    <br />
+    <br />
+</header>
+<style>
+    .menu-home {
+        background-color: #b0c4de;
+        /*width: 150px;*/
+        text-align: center;
+    }
+
+    .body-back-color {
+        background-color: #b0c4de;
+    }
+
+    .intro__contact .highlight-link {
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        font-weight: 400;
+        text-decoration: none;
+        display: inline-block;
+        padding: 2px 3px;
+        text-decoration: none;
+        -webkit-box-shadow: inset 0 -3px 0 #bae67e;
+        box-shadow: inset 0 -3px 0 #bae67e
+    }
+
+        .intro__contact .highlight-link img {
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+
+    .intro__contact .highlight-link:hover {
+        -webkit-box-shadow: inset 0 -33px 0 0 #719f32;
+        box-shadow: inset 0 -33px 0 0 #719f32;
+        color: #fff
+    }
+
+    .intro__contact .highlight-link:hover img {
+        filter: invert(100%);
+    }
+
+</style>
