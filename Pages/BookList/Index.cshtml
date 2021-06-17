@@ -1,0 +1,140 @@
+﻿@page
+@model Portfolio.Pages.BookList.IndexModel
+@{
+    ViewData["Title"] = "Book List";
+}
+<br />
+<div>
+    <div class="col-12" style="text-align:center">
+        <br />
+        <h2 class="text-info"> Book List - Static Table - HTML + Razor </h2>
+        <p style="color: darkred; font-style:italic;">-Synchronous (Redirecting or refreshing is necessary to update content)</p>
+        <p style="color: darkred; font-style:italic;">-Table doesn't have pagination, filtering, nor ordenation</p>
+        <p style="color: darkred; font-style:italic;">-Table deletes registries from the database</p>
+        <p style="color: darkred; font-style:italic;">-Table just deletes files from server</p>
+    </div>
+    <div class="col-3">
+        <a asp-page="Create" class="btn btn-info form-control text-white">Create new book - Static</a>
+    </div>
+    <div class="col-12 border p-3 mt-3">
+        <form method="post">
+            @if (Model.Books.Count() > 0)
+            {
+            <table class="table table-striped border">
+                <tr class="table-secondary">
+                    <th style="width:20%;">
+                        <label asp-for="Books.FirstOrDefault().Name"></label>
+                    </th>
+                    <th style="width:20%;">
+                        @*Html.DisplayNameFor(m=>m.Books.FirstOrDefault().Author)*@
+                        <label asp-for="Books.FirstOrDefault().Author"></label>
+                    </th>
+                    <th style="width:20%;">
+                        <label asp-for="Books.FirstOrDefault().ReleaseYear"></label>
+                    </th>
+                    <th style="width:20%;">
+                        <label asp-for="Books.FirstOrDefault().Image">Front Cover</label>
+                    </th>
+                    <th style="width:20%;">
+                        <label>Action</label>
+                    </th>
+                </tr>
+                @foreach (var item in Model.Books)
+                    {
+                        var style = "height: 30px;";
+                @if (item.Bought)
+                        {
+                            style += " background-color : darkseagreen;";
+                        }
+
+                @if (item.Cart)
+                        {
+                            style += " background-color : lightyellow;";
+                        }
+                <tr style="@style">
+                    <td>
+                        @Html.DisplayFor(m => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.Author)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.ReleaseYear)
+                    </td>
+                    <td>
+                        @{
+                            if (item.Format != null && item.Format != "")
+                            {
+                                var url = "~/Images/" + item.Id.ToString() + item.Format.ToString();
+                            <img src="@Url.Content(url)" style="display: block; width: 100%;" />
+                                }
+                        }
+                    </td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm text-white">Edit</a>
+                        <button asp-page-handler="Delete" asp-route-id="@item.Id"
+                                onclick="return confirm('Are you sure you want to delete ' + @item.Name + '?')"
+                                class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
+                        @if (!item.Cart)
+                        {
+                        <button asp-page-handler="Buy" asp-route-id="@item.Id"
+                                onclick="return confirm('Are you sure you want to buy ' + @item.Name + '?')"
+                                class="btn btn-info btn-sm">
+                            Buy
+                        </button>
+                        }
+                    </td>
+                </tr>
+                    }
+            </table>
+            }
+            else
+            {
+            <p>No books available.</p>
+            }
+        </form>
+    </div>
+
+    <div class="col-12" style="text-align:center">
+        <br />
+        <span class="h3 text-info">OR</span>
+        <h2 class="text-info"> Book List - Dynamic Table - JQuery + Controller</h2>
+        <p style="color: darkgreen; font-style:italic;">-Asynchronous (Uses JQuery ajax to update information)</p>
+        <p style="color: darkgreen; font-style:italic;">-User can filter, order, and navigate through pages in the table</p>
+        <p style="color: darkgreen; font-style:italic;">-Table deletes registries logically in the database</p>
+        <p style="color: darkgreen; font-style:italic;">-Table deletes files from server and keeps backup in database</p>
+        <br /><br />
+    </div>
+    <div>
+        <div class="col-3">
+            <a asp-page="Upsert" class="btn btn-info form-control text-white">Create new book - Dynamic</a>
+        </div>
+        <br />
+    </div>
+    <div class="col-12 border p-3">
+        <table id="DT_load" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th> Name</th>
+                    <th> Author</th>
+                    <th> Release Year</th>
+                    <th> Front Cover</th>
+                    <th> Action</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<style>
+    .greenClass {
+        background-color: darkseagreen !important;
+    }
+    .yellowClass {
+        background-color: lightyellow !important;
+    }
+</style>
+@section Scripts{
+    <script src="~/js/bookList.js"></script>
+}
