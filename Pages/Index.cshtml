@@ -17,24 +17,40 @@
     <div class="intro__wrap">
         <br />
         <br />
-        <h1 class="intro__hello">Hello!</h1>
+        <h1 class="intro__hello" style="font-size: 38px !important;">Hello!</h1>
         <br />
         <br />
         <br />
-        <img class="intro__icon" src="~/Images/avatar.jpg" alt="Daniel Corbi Boldrin Avatar" style="border-radius: 25% 50% 50% 25%;">
+        <div class="company">
+            <br />
+            <br />
+            <br />
+            <br />
+            <img id="Avatar" class="intro__icon avatar__wave" src="~/Images/avatar.jpg" alt="Daniel Corbi Boldrin Avatar" style="border-radius: 25% 50% 50% 25%; text-align:center;" onclick="wave()">
+            <div style="clear:both; width: 100%;"></div>
+            <br />
+            <h2>Resume</h2>
+            <div style="clear:both; width: 100%;"></div>
+            <a href="~/Documents/CV.docx" target="_blank" class="alt-wrap">
+                <img src="~/Images/BW/word.png" alt="Word Document" style="border-radius: 25%; max-width: 60px; max-height: 60px; text-align: center;">
+            </a>
+            <a href="~/Documents/CV.pdf" target="_blank" class="alt-wrap">
+                <img src="~/Images/BW/pdf.png" alt="PDF Document" style="border-radius: 25%; max-width: 60px; max-height: 60px; text-align: center;">
+            </a>
+        </div>
         <h2 class="intro__tagline" style="text-align: center;">
             I'm <span class="name">Daniel Boldrin</span>, a passionate professional System Analyst and Game Programmer who loves to design and develop games and applications.
         </h2>
     </div>
-    <h3 class="intro__contact" style="text-align: center; overflow:hidden;">
-        <p  class="animated">
-            <span>
-                Want to get in touch? You can reach me at <a href="mailto:daniel_cboldrin@hotmail.com" target="_blank" class="highlight-link">daniel_cboldrin@hotmail.com<img class="intro__icon" src="~/Images/BW/email-t.png" alt="Daniel Corbi Boldrin Avatar" style="border-radius: 50%; width:25px; height:25px; margin-left: 10px;"></a>
-            </span>
-        </p>
-    </h3>
-    <br />
-    <br />
+        <h3 class="intro__contact" style="text-align: center; overflow:hidden;">
+            <p class="animated">
+                <span>
+                    Want to get in touch? You can reach me at <a href="mailto:daniel_cboldrin@hotmail.com" target="_blank" class="highlight-link">daniel_cboldrin@hotmail.com<img class="intro__icon" src="~/Images/BW/email-t.png" alt="Daniel Corbi Boldrin Avatar" style="border-radius: 50%; width:25px; height:25px; margin-left: 10px;"></a>
+                </span>
+            </p>
+        </h3>
+        <br />
+        <br />
 </header>
 <style>
     .menu-home {
@@ -75,3 +91,15 @@
     }
 
 </style>
+
+<script>
+
+    function wave() {
+        var el = document.getElementById('Avatar');
+        el.classList.remove('avatar__wave');
+        el.offsetWidth;
+        el.classList.add('avatar__wave');
+    }
+
+
+</script>
