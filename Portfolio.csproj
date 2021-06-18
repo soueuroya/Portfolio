@@ -17,8 +17,4 @@
 	  
   </ItemGroup>
 
-  <ItemGroup>
-	  <Folder Include="wwwroot\Images\" />
-  </ItemGroup>
-
 </Project>
