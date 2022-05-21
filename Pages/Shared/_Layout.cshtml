@@ -24,33 +24,36 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <!--<li class="nav-item menu-resume">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Resume">Resume</a>
-                        </li>-->
+        <a class="nav-link text-dark" asp-area="" asp-page="/Resume">Resume</a>
+    </li>-->
                         <li class="nav-item menu-games">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Games">Games</a>
                         </li>
-                        <!--
-                        <li class="nav-item menu-projects">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Projects">Projects</a>
+                        <li class="nav-item menu-assets">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Assets">Assets</a>
                         </li>
-                            -->
+                        <!--
+    <li class="nav-item menu-projects">
+        <a class="nav-link text-dark" asp-area="" asp-page="/Projects">Projects</a>
+    </li>
+        -->
                         <li class="nav-item menu-experience">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Experience">Experience</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Experience">Work Experience</a>
                         </li>
                         <li class="nav-item menu-education">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Education">Education</a>
                         </li>
                         <!--
-                        <li class="nav-item menu-contact">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Contact">Contact</a>
-                        </li>
-                       
-                        <!--<li class="nav-item menu-booklist">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/BookList/Index">Book List</a>
-                        </li>
-                        <li class="nav-item, align-content-end menu-bookcart">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/BookList/Cart">Book Cart</a>
-                        </li>-->
+    <li class="nav-item menu-contact">
+        <a class="nav-link text-dark" asp-area="" asp-page="/Contact">Contact</a>
+    </li>
+
+    <!--<li class="nav-item menu-booklist">
+        <a class="nav-link text-dark" asp-area="" asp-page="/BookList/Index">Book List</a>
+    </li>
+    <li class="nav-item, align-content-end menu-bookcart">
+        <a class="nav-link text-dark" asp-area="" asp-page="/BookList/Cart">Book Cart</a>
+    </li>-->
                     </ul>
                 </div>
             </div>
@@ -64,7 +67,7 @@
         </div>
     </div>
     <footer class="border-top footer text-muted navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="background-color: white; width: 100%; text-align: right !important; height: 6vh;">
-        &copy; 2021 - Daniel Boldrin
+        &copy; 2022 - Daniel Boldrin
         <button id="dd2" name="dd2" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -93,6 +96,12 @@
                     <a class="nav-link text-dark" href="mailto:daniel_cboldrin@hotmail.com" target="_blank">
                         <img class="intro__icon" src="~/Images/BW/email.png" alt="Email Logo" style="border-radius: 50%; width: 25px; height: 25px;">
                         Contact
+                    </a>
+                </li>
+                <li class="nav-item, align-content-end" style="text-align: right !important; float: right;">
+                    <a class="nav-link text-dark" href="https://assetstore.unity.com/publishers/67786" target="_blank">
+                        <img class="intro__icon" src="~/Images/BW/assetstore.png" alt="Unity Asset Store Logo" style="border-radius: 50%; width: 25px; height: 25px;">
+                        Asset Store
                     </a>
                 </li>
             </ul>
@@ -130,6 +139,11 @@
     }
 
     .menu-games {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-assets {
         width: 100%;
         text-align: center;
     }
