@@ -12,7 +12,7 @@
 <body class="body-back-color">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white" style="padding-bottom: 0px; height: 6vh;">
-            <div class="container">
+            <div class="container" style="min-width: 70vw !important;">
                 <a class="navbar-brand" asp-area="" asp-page="/Index" style="margin-right: 60px;">Daniel Boldrin Portfolio</a>
                 <button id="btn1" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -24,8 +24,8 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <!--<li class="nav-item menu-resume">
-        <a class="nav-link text-dark" asp-area="" asp-page="/Resume">Resume</a>
-    </li>-->
+                <a class="nav-link text-dark" asp-area="" asp-page="/Resume">Resume</a>
+            </li>-->
                         <li class="nav-item menu-games">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Games">Games</a>
                         </li>
@@ -33,10 +33,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Assets">Assets</a>
                         </li>
                         <!--
-    <li class="nav-item menu-projects">
-        <a class="nav-link text-dark" asp-area="" asp-page="/Projects">Projects</a>
-    </li>
-        -->
+            <li class="nav-item menu-projects">
+                <a class="nav-link text-dark" asp-area="" asp-page="/Projects">Projects</a>
+            </li>
+                -->
                         <li class="nav-item menu-experience">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Experience">Work Experience</a>
                         </li>
@@ -44,29 +44,29 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Education">Education</a>
                         </li>
                         <!--
-    <li class="nav-item menu-contact">
-        <a class="nav-link text-dark" asp-area="" asp-page="/Contact">Contact</a>
-    </li>
+            <li class="nav-item menu-contact">
+                <a class="nav-link text-dark" asp-area="" asp-page="/Contact">Contact</a>
+            </li>
 
-    <!--<li class="nav-item menu-booklist">
-        <a class="nav-link text-dark" asp-area="" asp-page="/BookList/Index">Book List</a>
-    </li>
-    <li class="nav-item, align-content-end menu-bookcart">
-        <a class="nav-link text-dark" asp-area="" asp-page="/BookList/Cart">Book Cart</a>
-    </li>-->
+            <!--<li class="nav-item menu-booklist">
+                <a class="nav-link text-dark" asp-area="" asp-page="/BookList/Index">Book List</a>
+            </li>
+            <li class="nav-item, align-content-end menu-bookcart">
+                <a class="nav-link text-dark" asp-area="" asp-page="/BookList/Cart">Book Cart</a>
+            </li>-->
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div class="scrollable">
-        <div class="container">
+        <div class="container" style="min-width: 70vw !important;">
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
         </div>
     </div>
-    <footer class="border-top footer text-muted navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="background-color: white; width: 100%; text-align: right !important; height: 6vh;">
+    <footer class="border-top footer text-muted navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow" style="background-color: white; width: 100%; text-align: right !important; height: 6vh;">
         &copy; 2022 - Daniel Boldrin
         <button id="dd2" name="dd2" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
